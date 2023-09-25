@@ -1,0 +1,11 @@
+.btn{padding-top: 7px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    height: 30px;
+    border: #37b9c0 ;
+    border-radius: 50px;
+    background-color:#37b9c0; 
+   }

@@ -1,0 +1,62 @@
+/* Base styles for larger screens */
+#container {
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 30px;
+    background-color: #B0D8DA;
+    margin: 50px 100px;
+}
+
+
+
+/* Media query for screens up to 768px wide  */
+@media (max-width: 768px) {
+    #container {
+        flex-direction: column; 
+        margin: 20px; }
+
+    .abstraction {
+        position: relative; 
+        width: 100%; 
+        height: auto; 
+        left: 0;
+        top: 0;
+    }
+
+   
+    
+    #firstPart {
+        padding-top: 20px; 
+    }
+}
+
+/* Media query for screens between 769px and 1024px wide  */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #container {
+        margin: 30px; 
+    }
+
+  
+    
+    .abstraction {
+        width: 250px; 
+        height: 250px;
+    }
+
+    #firstPart {
+        padding-top: 50px; 
+    }
+
+    .register {
+        padding-left: 50px; 
+    }
+}
+
+/* Media query for screens wider than 1024px  */
+@media (min-width: 1025px) {
+    #container {
+        margin: 50px 100px;
+    }
+
+   
+}

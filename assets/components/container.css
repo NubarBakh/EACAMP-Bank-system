@@ -1,0 +1,6 @@
+#container{
+    display: flex;
+    box-sizing: border-box;   
+    border-radius: 30px;
+    background-color: #B0D8DA;
+    margin: 50px 100px;}
