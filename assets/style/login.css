@@ -4,15 +4,21 @@
 @import url(../components/input.css);
 @import url(../components/responsive.css);
 
-/*Registiration part*/
-.register{
+
+/*Design  left and right side of menu*/
+
+.container
+{
     padding: 10px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column ;
     text-align: start;
-    padding-left: 100px;
+    padding-left: 150px;
     text-align: start;}
+
+
+    /*Sign up*/
 
 .information{
     box-sizing: border-box;
@@ -21,14 +27,38 @@
     width: 60%;
     color: grey;}
 
+.sign-in{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column ;
+    padding-left: 15%;
+    padding-bottom: 30%;
+    text-align: start;}
 
+/*Remember me section*/
 .checkbox {
     display: flex;
     flex-direction: column;}
 
-#check{display: flex;
-flex-direction: row;}
+#check{
+    display: flex;
+    flex-direction: row;}
 
 .ok{
-padding-left: 10px;
-color: gray;}
+    margin-top: 5px;
+    padding-left: 10px;
+    color: gray;}
+
+
+.box{margin: 0px;
+    padding-top: 100px;
+}
+
+/*Select language*/
+.image {
+    padding-top: 2%;
+}
+
+
+
+
