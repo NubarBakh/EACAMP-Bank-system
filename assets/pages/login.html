@@ -6,6 +6,7 @@
     <title>EACAMP Bank</title>
     <link rel="stylesheet" href="../style/login.css">
     <link rel="stylesheet" href="../style/reset.css">
+    <script src="../js/login.js" defer ></script>
     
 
 </head>
@@ -48,11 +49,11 @@
         
                             <label for="email">E-mail ünvanınız</label>
                             <input type="email" placeholder="Mail ünvanınızı daxil edin!" id="email">
-                            <p></p>
+                            <p id="emailjs"></p>
         
                             <label for="password">Şifrə</label>
                             <input type="password" placeholder="Şifrə daxil edin!" id="password">
-                            <p></p>
+                            <p id="passwordjs"></p>
         
                         
                            
@@ -62,12 +63,13 @@
 
                         <div class="checkbox">
                             <div id="check">
-                                <input type="checkbox" class="box" >
+                                <input type="checkbox" class="box"  id="checkOk">
                                 <p class="ok">Məni yadda saxla.</p>
                             </div>
+                            <p id="isOk"></p>
         
     <!--Button for sign in-->
-                            <a class="alink" href="./assets/pages/login.html"> <button type="button" class="btn" >Daxil olun</button></a>
+                            <button type="button" id="btn" >Daxil olun</button>
                         </div>
     
                     </div>

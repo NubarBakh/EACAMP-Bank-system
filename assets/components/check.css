@@ -1,0 +1,10 @@
+.checkbox {
+    display: flex;
+    flex-direction: column;}
+
+#check{display: flex;
+flex-direction: row;}
+
+.ok{
+padding-left: 10px;
+color: gray;}

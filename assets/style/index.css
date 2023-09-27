@@ -3,6 +3,7 @@
 @import url(../components/2sides.css);
 @import url(../components/input.css);
 @import url(../components/responsive.css);
+@import url(../components/check.css);
 
 /*Registiration part*/
 .register{
@@ -22,13 +23,3 @@
     color: grey;}
 
 
-.checkbox {
-    display: flex;
-    flex-direction: column;}
-
-#check{display: flex;
-flex-direction: row;}
-
-.ok{
-padding-left: 10px;
-color: gray;}
