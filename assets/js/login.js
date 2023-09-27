@@ -19,7 +19,7 @@ btn.addEventListener("click",function(){
         console.log( getPass)
     
      if((email !==getMail)|| (password!==getPass)){
-        passwordjs.innerHTML= "The email address or password is incorrect. Please retry...";
+        passwordjs.innerHTML= "The email address or password is incorrect. ";
         passwordjs.style.color= `red`;
      }else{passwordjs.innerHTML="";}
 
