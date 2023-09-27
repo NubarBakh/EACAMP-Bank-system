@@ -10,7 +10,8 @@ btn.addEventListener("click",function() {
     /*Name- input*/
     let ad =document.querySelector("#ad");
     let namejs= document.querySelector("#namejs");
-    namejs.style.color= `red`; //when error happen it show us in red color. //css//
+    namejs.style.color= `red`; 
+   //when error happen it show us in red color. //css//
 
 
     let customerName =ad.value.trim();// to get Customername string
@@ -19,7 +20,9 @@ btn.addEventListener("click",function() {
 // control that customer name must contain only letters and must be  minimum 3 and maximum 12 characters.
 //for it we use `IF statements` and for letter we use char code
     if (customerName.length<3 ||customerName.length>12){ 
-        namejs.innerHTML=`The name must be  minimum 3 and maximum 12 characters.`;}
+        namejs.innerHTML=`The name must be  minimum 3 and maximum 12 characters.`;
+        ad.style.borderColor= "red";
+    }
 
         else{
             for(let i=0; i<customerName.length;i++)
@@ -27,6 +30,7 @@ btn.addEventListener("click",function() {
            
                  if(!((charCode>=65 && charCode<=90) || (charCode>=97 && charCode<=122)))
                      {namejs.innerHTML=`The name must  contain only letter.`
+                     ad.style.borderColor= "red";
                      break;}// i use break in order to break loop if find something i do not need.
                     else{ namejs.innerHTML= "";} }} //if everything is ok , like if customer write her name correct.
 
@@ -41,7 +45,8 @@ btn.addEventListener("click",function() {
     let customerSurname =soyad.value.trim();
     
     if (customerSurname.length<3 ||customerSurname.length>15){
-        surnamejs.innerHTML=`The surname must be  minimum 3 and maximum 15 characters.`;}
+        surnamejs.innerHTML=`The surname must be  minimum 3 and maximum 15 characters.`;
+        soyad.style.borderColor= "red";}
 
         else{
 
@@ -50,6 +55,7 @@ btn.addEventListener("click",function() {
             
                 if(!((charCode>=65 && charCode<=90) || (charCode>=97 && charCode<=122)))
                     {surnamejs.innerHTML=`The name must  contain only letter.`
+                    soyad.style.borderColor= "red";
                     break;}
                     else{ surnamejs.innerHTML= "";}}}
                         
@@ -61,9 +67,12 @@ btn.addEventListener("click",function() {
     let customerPassword =password.value.trim();
    
     if (customerPassword.length<8 ||customerPassword.length>20){
-        passjs.innerHTML=`The password must be  minimum 8 and maximum 20 characters.`; }
+        passjs.innerHTML=`The password must be  minimum 8 and maximum 20 characters.`;
+        password.style.borderColor= "red"; 
+      
+    }
         else{ passjs.innerHTML= "";}
-        ;
+        
    
 
     /* Repeat Password */
@@ -74,7 +83,8 @@ btn.addEventListener("click",function() {
 
 
     if (customerPassword2 !==customerPassword){    // I compared codes. Because, sometime customer do not write the same code
-        repeatpassjs.innerHTML=`Passwods do not match.`;} 
+        repeatpassjs.innerHTML=`Passwods do not match.`;
+        password2.style.borderColor= "red" } 
         else{ repeatpassjs.innerHTML= "";}
        
        // Local storage
@@ -88,7 +98,8 @@ btn.addEventListener("click",function() {
     mailjs.style.color= `red`;
     let customerMail =email.value.trim();
 
-    if(customerMail=== " " || !customerMail.includes("@")){mailjs.innerHTML=`Please write your correct mail.`}
+    if(customerMail=== " " || !customerMail.includes("@")){mailjs.innerHTML=`Please write your correct mail.`
+    email.style.borderColor= "red"; }
     else{ mailjs.innerHTML= "";}
 
     // Local storage
@@ -107,10 +118,14 @@ btn.addEventListener("click",function() {
 
 
 
-    // We must check all codes, that customer fill all the  blank correctly. After that we redirect customer to new page.
+    // We must check all codes, that customer fill all the  blank correctly. After that we redirect customer to another page
     if (namejs.innerHTML === "" && surnamejs.innerHTML === "" && passjs.innerHTML === "" && repeatpassjs.innerHTML === "" && mailjs.innerHTML === "" && isOk.innerHTML === "") {
       // All checks passed, so redirect to another page
       window.location.href = "http://127.0.0.1:5500/assets/pages/login.html";}
+
+        
+      
+     
 
 });
 

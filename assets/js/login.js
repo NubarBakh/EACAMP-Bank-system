@@ -29,6 +29,7 @@ btn.addEventListener("click",function(){
      if((email !==getMail)|| (password!==getPass)){
         passwordjs.innerHTML= "The email address or password is incorrect. ";
         passwordjs.style.color= `red`;
+       
      }else{passwordjs.innerHTML="";}
 
 
