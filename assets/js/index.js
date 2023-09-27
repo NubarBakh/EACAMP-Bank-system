@@ -1,23 +1,24 @@
-
-
+/*Use DOM elements for touch HTML tags*/
+//  in order to Sign up
 
 let btn =document.querySelector("#btn");
-
 
 
 btn.addEventListener("click",function() {
 
 
-
-    /*Name*/
+    /*Name- input*/
     let ad =document.querySelector("#ad");
     let namejs= document.querySelector("#namejs");
-    namejs.style.color= `red`;
+    namejs.style.color= `red`; //when error happen it show us in red color. //css//
 
 
-    let customerName =ad.value.trim();
+    let customerName =ad.value.trim();// to get Customername string
 
-    if (customerName.length<3 ||customerName.length>12){
+
+// control that customer name must contain only letters and must be  minimum 3 and maximum 12 characters.
+//for it we use `IF statements` and for letter we use char code
+    if (customerName.length<3 ||customerName.length>12){ 
         namejs.innerHTML=`The name must be  minimum 3 and maximum 12 characters.`;}
 
         else{
@@ -26,14 +27,14 @@ btn.addEventListener("click",function() {
            
                  if(!((charCode>=65 && charCode<=90) || (charCode>=97 && charCode<=122)))
                      {namejs.innerHTML=`The name must  contain only letter.`
-                     break;}
-                    else{ namejs.innerHTML= "";} }}
+                     break;}// i use break in order to break loop if find something i do not need.
+                    else{ namejs.innerHTML= "";} }} //if everything is ok , like if customer write her name correct.
 
      
 
 /*Surname*/
 
-
+//I used same code above. So if you do not understand look previous code.
     let soyad =document.querySelector("#soyad");
     let surnamejs= document.querySelector("#surnamejs");
     surnamejs.style.color= `red`;
@@ -71,13 +72,14 @@ btn.addEventListener("click",function() {
     repeatpassjs.style.color= `red`;
     let customerPassword2 =password2.value.trim();
 
-    if (customerPassword2 !==customerPassword){
+
+    if (customerPassword2 !==customerPassword){    // I compared codes. Because, sometime customer do not write the same code
         repeatpassjs.innerHTML=`Passwods do not match.`;} 
         else{ repeatpassjs.innerHTML= "";}
        
        // Local storage
         localStorage.setItem(`password`, password2.value.trim());
-        let value =localStorage.getItem(`[password`);
+        let value =localStorage.getItem(`password`);
         console.log(value);
     
     /*E-mail*/ 
@@ -93,10 +95,10 @@ btn.addEventListener("click",function() {
     localStorage.setItem(`e-mail`, email.value.trim());
     let value2 =localStorage.getItem(`e-mail`);
     console.log(value2);
+
+
     /* click `I agree` */
-
     let checkOk= document.querySelector("#checkOk")
-
     let isOk= document.querySelector("#isOk");
     isOk.style.color= `red`;
 
@@ -105,11 +107,20 @@ btn.addEventListener("click",function() {
 
 
 
-    
+    // We must check all codes, that customer fill all the  blank correctly. After that we redirect customer to new page.
     if (namejs.innerHTML === "" && surnamejs.innerHTML === "" && passjs.innerHTML === "" && repeatpassjs.innerHTML === "" && mailjs.innerHTML === "" && isOk.innerHTML === "") {
       // All checks passed, so redirect to another page
       window.location.href = "http://127.0.0.1:5500/assets/pages/login.html";}
 
-})
+});
 
+
+      /*      
+      btn.addEventListener("mouseover", function(){
+           
+      
+            btn.classList.toggle("right");
+
+        });
+*/
 
