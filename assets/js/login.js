@@ -17,9 +17,11 @@ btn.addEventListener("click",function(){
 
 
     //Password
-    let password =document.querySelector("#password");
+    let passwords =document.querySelector("#password");
     let passwordjs= document.querySelector("#passwordjs");
-    password=password.value.trim();
+    password=passwords.value.trim();
+
+    console.log(password.value)
 
     //localStorage/ GetItem
     let getPass=localStorage.getItem("password")
@@ -41,8 +43,24 @@ let checkOk= document.querySelector("#checkOk")
 let isOk= document.querySelector("#isOk");
 isOk.style.color= `red`;
 
-    if(!checkOk.checked){isOk.innerHTML= `Please check`} 
+if(!checkOk.checked){isOk.innerHTML= `Please check`} 
     else{ isOk.innerHTML= "";}
+
+
+
+     /*Toggle; float*/
+
+    btn.addEventListener("mouseover", function(){
+        
+        // if inputs are not empty we must remove " right " class; because we must press button
+        if( passwords.value !=="" && email.value !=="" ){btn.classList.remove("right");}// if inputs are not empty we must remove " right " class; because we must press button
+            else{
+                btn.classList.toggle("right") // if inputs are empty we must add " right" class; because our button move to left right with float right 
+
+  }
+
+});
+
     
     
 })
