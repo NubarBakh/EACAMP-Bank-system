@@ -1,9 +1,9 @@
 #btn{padding-top: 7px;
     margin-bottom: 10px;
     color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    
+    margin-left: 60px;
+    margin-right: 60px;
     width: 20%;
     height: 30px;
     border: none;
@@ -13,6 +13,6 @@
 
    }
 
-   .right{float: right !important;
-z-index: 3;}
-   
+   .right {
+    float: right;
+   }

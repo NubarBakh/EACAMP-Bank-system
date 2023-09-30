@@ -13,7 +13,7 @@ btn.addEventListener("click",function() {
     namejs.style.color= `red`; 
    //when error happen it show us in red color. //css//
 
-
+   console.log(ad.value)
     let customerName =ad.value.trim();// to get Customername string
 
 
@@ -118,7 +118,23 @@ btn.addEventListener("click",function() {
 
 
 
+                /*Toggle; float*/
+
+    btn.addEventListener("mouseover", function(){
+                  // if inputs are not empty we must remove " right " class; because we must press button
+            if(ad.value !==""&&soyad.value !=="" &&  password2.value !=="" && password.value !=="" && email.value !==""){btn.classList.remove("right");}// if inputs are not empty we must remove " right " class; because we must press button
+            else{btn.classList.toggle("right") // if inputs are empty we must add " right" class; because our button move to left right with float right 
+ 
+            }
+
+        });
+
+
+
     // We must check all codes, that customer fill all the  blank correctly. After that we redirect customer to another page
+        
+
+    
     if (namejs.innerHTML === "" && surnamejs.innerHTML === "" && passjs.innerHTML === "" && repeatpassjs.innerHTML === "" && mailjs.innerHTML === "" && isOk.innerHTML === "") {
       // All checks passed, so redirect to another page
       window.location.href = "http://127.0.0.1:5500/assets/pages/login.html";}
@@ -130,12 +146,7 @@ btn.addEventListener("click",function() {
 });
 
 
-      /*      
-      btn.addEventListener("mouseover", function(){
-           
-      
-            btn.classList.toggle("right");
+         
+     
 
-        });
-*/
 
