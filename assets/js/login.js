@@ -60,7 +60,5 @@ if(!checkOk.checked){isOk.innerHTML= `Please check`}
   }
 
 });
-
-    
-    
+  
 })
